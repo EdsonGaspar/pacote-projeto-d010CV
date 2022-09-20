@@ -1,2 +1,2 @@
 # pacote-projeto-d010CV
- Primeiro projecto feito em html e css
+ Primeiro projecto feito em html5 e css3, acompanhando o cursoemvideo...
