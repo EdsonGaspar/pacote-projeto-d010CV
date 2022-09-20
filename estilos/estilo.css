@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/*Importando as Fontes*/
+@font-face {
+    font-family: BebasNeue;
+    src: url('/fontes/BebasNeue.otf') format("opentype");
+}
+@font-face {
+    font-family: idroid;
+    src: url('/fontes/idroid.otf') format("opentype");
+}
+:root{
+    /*ROOT: É uma função que todo programa CSS tem, criamos as nossas variaveis globais Lá.
+    Usando a nossa paleta de cor difinimos as nossas cor de tom mais claro para os tons mais escuros.*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --font-destaque:BebasNeue, cursive;
+    --font-android: idroid, cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+header{
+    background-image: linear-gradient(to bottom,var(--cor3) ,var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding: 40px;
+}
+header> h1{
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.421);
+}
+header>p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 640px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.277);
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.693);
+}
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+main{
+    background-color: white;
+    margin: auto;
+    min-width: 320px;
+    max-width: 800px;
+}
+img{
+    width: 100%;    
+}
+main img.pequena{
+   /*width: 50%; //Por ser uma imagen Já pequena a pescentagem vai lhe prejudicar em dispositivos pequenos...*/
+   max-width: 350px;/*Voi lhe tornar mais nitidas em qualquer resolução de tela*/
+   display: block;
+   margin: auto;
+}
+main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+    text-indent: 10px;
+}
+main h2{
+    font-family: var(--font-android);
+    font-weight: normal;
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    padding-left: 10px;
+}
+main p{
+    text-align: justify;
+    padding: 15px 7px;
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+main strong{
+    color: var(--cor5);
+    font-weight: bolder;
+    
+}
+main a{
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor5);
+    font-weight: bold;
+    padding: 2px 3px;
+}
+main a:hover{
+    text-decoration: underline;
+}
+a.externo::after{
+    content: '\00A0\1F517';
+}
+div.video{
+    background-color: var(--cor5);
+    margin: 0px 0px 30px 0px;
+    padding-bottom: 50%;
+    position: relative;
+}
+div.video > iframe{
+    /*Videos Ospedados em outros Lugares: Youtube, Vimeo...*/
+    position: absolute;
+    top: 5%;        
+    left: 5%;
+    height: 90%;
+    width: 90%;
+}
+div>video{
+    position: absolute;
+    top: 5%;        
+    left: 5%;
+    height: 90%;
+    width: 90%;
+}
+aside{
+    background-color: var(--cor0);
+    border-radius: 10px;
+    max-width: 780px;
+    margin: auto;
+}
+aside>h3{
+    background-color: var(--cor3);
+    padding: 10px;
+    /*margin: -10px -10px 0px -10px;*/
+    
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+aside ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    padding: 10px;
+    columns: 2;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    
+}
+footer a:hover{
+    text-decoration: underline;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-weight: bolder;
+}
